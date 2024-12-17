@@ -1,36 +1,55 @@
-# AI stock analysis web application
-Description: The AI Stock Analysis Web Application is a comprehensive tool providing users with stock market data and visual graphs and charts from major exchanges like NASDAQ, BSE, and NSE. Integrated with advanced AI capabilities, the application can analyze data, draw inferences, predict trends, model investment strategies, and perform backtesting. A key feature of the application is its autonomous agent that fetches real-time stock prices from the web and updates the data continuously as rates change.
+# StockAgent Analyzer: A Multi-Faceted Data Analysis Platform
 
-# Features
+**Description:**
 
-- **Comprehensive Stock Data Visualization**: Provides detailed stock market data along with visual graphs and charts from major exchanges like NASDAQ, BSE, and NSE.
-- **AI-Driven Analysis and Predictions**: Utilizes AI to analyze data, draw inferences, predict trends, model investment strategies, and perform backtesting.
-- **Real-Time Data Updates**: Features an autonomous agent that fetches real-time stock prices from the web, continuously updating the data as rates change.
+StockAgent is a versatile data analysis platform that provides users with real-time data streams, historical analysis, and AI-driven insights. The platform enables users to visualize trends, explore patterns, and leverage advanced AI capabilities for data interpretation, all within an intuitive web-based application. A key feature is the use of autonomous agents for continuous data monitoring and updates.
 
-# Setup and Run
-- **Step 1**: Download the entire project as ZIP.
-- **Step 2**: Create a virtual environment.
-- **Step 3**: Install all the required Python packages by running the code on the terminal/shell ```pip install -r requirements.txt```. 
-- **Step 4**: Get an API key from [GroqCloud] (https://console.groq.com/keys) and paste it inside the [.env] file, specificly in the line ```GROQ_API_KEY= ```.
-- **Step 5**: After completing all the required steps mentioned earlier run the '''SeekVestor.py''' file on the terminal/shell as ```streamlit run SeekVestor.py```.
+**Features:**
 
-# Useage
-For better understanding on how the web page functions in depth read the '''.How_It_Works.py'''(or .How_It_Works section in the web page).
+*   **Comprehensive Data Visualization**: Provides interactive charts and graphs for a variety of datasets, enabling users to explore trends, patterns, and key metrics using customizable visualizations.
+*   **AI-Driven Insights**: Leverages AI to analyze data, draw inferences, identify trends, and provide predictive insights, supporting informed decision-making.
+*   **Real-Time Data Monitoring**: Employs autonomous agents to fetch and update data streams continuously, ensuring that users have access to the most current information.
 
-- **Screenshots of UI**
-- ![WhatsApp Image 2024-05-29 at 9 18 31 PM](https://github.com/Ritmukherjee0725/AI-stock-analysis-webapp/assets/83708027/a101b65c-df45-4e08-8e1e-48e08a3810a6)
+**Setup and Run:**
 
-- ![WhatsApp Image 2024-05-29 at 9 18 31 PM (1)](https://github.com/Ritmukherjee0725/AI-stock-analysis-webapp/assets/83708027/80b58c71-e7bf-4554-a690-fdcbf9c08252)
-- ![WhatsApp Image 2024-05-29 at 9 18 31 PM (2)](https://github.com/Ritmukherjee0725/AI-stock-analysis-webapp/assets/83708027/84107900-de8c-4ebb-b67f-35f546b9db8e)
-- ![WhatsApp Image 2024-05-29 at 9 18 31 PM (3)](https://github.com/Ritmukherjee0725/AI-stock-analysis-webapp/assets/83708027/fdcf16a1-6005-49e1-a3e4-01f3f44f5514)
-- ![WhatsApp Image 2024-05-29 at 9 18 31 PM (4)](https://github.com/Ritmukherjee0725/AI-stock-analysis-webapp/assets/83708027/de79c3bc-69bb-4ff2-a181-757ca830baa5)
-- ![WhatsApp Image 2024-05-29 at 9 18 31 PM (5)](https://github.com/Ritmukherjee0725/AI-stock-analysis-webapp/assets/83708027/d9be5ef3-7ed1-4e78-8e91-0a6a2bdcca17)
+Follow these steps to set up and run StockAgent:
 
+1.  **Clone/Download:** Download or clone the entire project repository to your local machine.
 
+2.  **Create a Virtual Environment:** Navigate to the project directory in your terminal and create a virtual environment using:
 
+    ```bash
+    python3.11 -m venv venv
+    ```
 
+3.  **Activate the Virtual Environment:** Activate the newly created virtual environment:
 
+    ```bash
+    source venv/bin/activate
+    ```
+    (On Windows, use `venv\Scripts\activate`)
 
+4.  **Install Dependencies:** Install all the necessary Python packages by running the following command:
 
+    ```bash
+    pip install -r requirements.txt
+    ```
 
+5. **Install Required Packages:** If you do not have a requirements.txt, you can directly install the packages using the following command:
+    ```bash
+    pip install streamlit pandas yfinance langchain openai==0.28 python-dotenv plotly
+    ```
+6.  **Get an API Key:** To use the AI analysis features, you need an OpenAI API key. Get an API key from [OpenAI](https://platform.openai.com/api-keys) and paste it into the `.env` file, specifically in the line:
 
+    ```
+    OPENAI_API_KEY=your_api_key_here
+    ```
+    (Make sure the .env file is in the same directory as the `main.py` file.)
+
+7.  **Run the Application:** After completing the setup steps, run the application by executing the main file:
+
+    ```bash
+    streamlit run main.py
+    ```
+
+    This will launch the application in your web browser.
