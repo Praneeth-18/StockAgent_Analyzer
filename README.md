@@ -1,3 +1,7 @@
+[YouTube Demo Video]()
+
+---
+
 # StockAgent Analyzer: A Multi-Faceted Data Analysis Platform
 
 **Description:**
