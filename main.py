@@ -262,7 +262,7 @@ openai.api_key = api_key
 def get_ai_insights(query, market_data):
     try:
         response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4o-mini",
             messages=[
                 {"role": "user", "content": query},
                 {"role": "user", "content": f"Market Data Analysis Request:\n\n{market_data}"}

@@ -21,7 +21,7 @@ class MarketAnalyzer:
         
     def setup_llm(self):
         self.llm = ChatOpenAI(
-            model_name="gpt-3.5-turbo",
+            model_name="gpt-4o-mini",
             temperature=0.3
         )
         self.embeddings = OpenAIEmbeddings()
@@ -55,12 +55,17 @@ class MarketAnalyzer:
         
         # Get analysis
         analysis = qa_chain.run(
-            """Analyze this market data and provide:
-            1. Main price trends
-            2. Key support and resistance levels
-            3. Volume analysis
-            4. Notable patterns or signals
-            Be specific with numbers and dates."""
+            """Analyze the provided historical market data and perform the following:
+
+    1. If the question specifically asks about whether to enter the market (e.g., "Should I enter?" or "Is now a good time to buy/sell?"), 
+       analyze the data at hand, focusing solely on price action. Provide a clear and concise response in the form of "Yes" or "No".
+
+    2. Include a brief explanation of your decision based only on price action, such as:
+       - Trends (higher highs, lower lows, sideways movement).
+       - Support and resistance levels.
+       - Reversal patterns or breakout confirmations.
+
+    Do not include volume analysis, indicators, or external factors. Keep the reasoning short and actionable."""
         )
         
         return {
